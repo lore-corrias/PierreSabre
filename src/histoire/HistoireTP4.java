@@ -59,5 +59,15 @@ public class HistoireTP4 {
 		masako.faireConnaissanceAvec(yaku);
 		masako.faireLeGentil();
 		masako.faireConnaissanceAvec(roro);
+		
+		GrandMere grandMere = new GrandMere("Grand-Mère", 10);
+		
+		grandMere.faireConnaissanceAvec(akimoto);
+		grandMere.faireConnaissanceAvec(yaku);
+		grandMere.faireConnaissanceAvec(masako);
+		grandMere.faireConnaissanceAvec(kumi);
+		grandMere.faireConnaissanceAvec(marco);
+		grandMere.faireConnaissanceAvec(chonin);
+		grandMere.ragoter();
 	}
 }

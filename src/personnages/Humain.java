@@ -1,14 +1,14 @@
 package personnages;
 
-public class Humaine {
+public class Humain {
 	private String nom;
 	private String boissonFavorite;
 	private int argent;
 	private final int maxConnaissance = 30;
 	protected int nbConnaissance = 0;
-	protected Humaine[] memoire = new Humaine[maxConnaissance];
+	protected Humain[] memoire = new Humain[maxConnaissance];
 	
-	public Humaine(String nom, String boissonFavorite, int argent) {
+	public Humain(String nom, String boissonFavorite, int argent) {
 		this.nom = nom;
 		this.boissonFavorite = boissonFavorite;
 		this.argent = argent;
@@ -51,18 +51,18 @@ public class Humaine {
 		return argent;
 	}
 	
-	public void faireConnaissanceAvec(Humaine homme) {
+	public void faireConnaissanceAvec(Humain homme) {
 		direBonjour();
 		homme.repondre(this);
 		memoriser(homme);
 	}
 	
-	private void repondre(Humaine homme) {
+	private void repondre(Humain homme) {
 		direBonjour();
 		memoriser(homme);
 	}
 	
-	private void memoriser(Humaine homme) {
+	protected void memoriser(Humain homme) {
 		if(nbConnaissance == maxConnaissance) {
 			for(int i = 1; i < nbConnaissance; i++) {
 				memoire[i-1] = memoire[i];
@@ -82,5 +82,9 @@ public class Humaine {
 				sb.append(", ");
 		}
 		parler(sb.toString());
+	}
+	
+	public int getNbConnaissance() {
+		return nbConnaissance;
 	}
 }

@@ -35,7 +35,7 @@ public class Traitre extends Samourai {
 			parler("Je ne peux faire ami ami avec personne car je ne connais personne ! Snif.");
 		} else {
 			Random rand = new Random();
-			Humaine homme = memoire[rand.nextInt(nbConnaissance)];
+			Humain homme = memoire[rand.nextInt(nbConnaissance)];
 			int don = getArgent() / 20;
 			
 			parler("Il faut absolument remonter ma cote de confiance. Je vais faire"
